@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Reactif } from "../../../Entity/Reactif";
+import { Reactif } from "../../../model/Reactif";
 import { Router } from "@angular/router";
-import { ReactifService } from "../../services/reactif.service";
+import { ReactifService } from "../../../services/reactif.service";
 
 @Component({
   selector: 'app-reactifs',

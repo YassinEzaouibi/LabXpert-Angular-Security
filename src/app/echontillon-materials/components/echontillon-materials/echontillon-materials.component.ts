@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { EchontillonMaterial } from 'src/app/Entity/echontillon-material';
-import { EchontillonMaterialService } from '../../services/echontillon-material.service';
+import { EchontillonMaterial } from 'src/app/model/echontillon-material';
+import { EchontillonMaterialService } from '../../../services/echontillon-material.service';
 import { Router } from '@angular/router';
 
 @Component({

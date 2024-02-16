@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
-import { FournisseurService } from "../../services/fournisseur.service";
-import { Fournisseur } from "../../../Entity/Fournisseur";
+import { FournisseurService } from "../../../services/fournisseur.service";
+import { Fournisseur } from "../../../model/Fournisseur";
 
 @Component({
   selector: 'app-update-fournisseur',

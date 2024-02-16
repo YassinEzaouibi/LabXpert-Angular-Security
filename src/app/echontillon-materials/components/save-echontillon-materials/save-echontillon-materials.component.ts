@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { EchontillonMaterial } from 'src/app/Entity/echontillon-material';
-import { EchontillonMaterialService } from '../../services/echontillon-material.service';
-import { EchontillonService } from 'src/app/echontillons/services/echontillon.service';
-import { MaterialService } from 'src/app/materials/services/material.service';
+import { EchontillonMaterial } from 'src/app/model/echontillon-material';
+import { EchontillonMaterialService } from '../../../services/echontillon-material.service';
+import { EchontillonService } from 'src/app/services/echontillon.service';
+import { MaterialService } from 'src/app/services/material.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({

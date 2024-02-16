@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Echontillon } from 'src/app/Entity/echontillon';
-import { EchontillonService } from '../../services/echontillon.service';
+import { Echontillon } from 'src/app/model/echontillon';
+import { EchontillonService } from '../../../services/echontillon.service';
 import { Router } from '@angular/router';
-import { Patient } from 'src/app/Entity/patient';
-import { PatientService } from 'src/app/patients/services/patient.service';
-import { Analyse } from 'src/app/Entity/analyse';
-import { AnalyseService } from 'src/app/analyses/services/analyse.service';
+import { Patient } from 'src/app/model/patient';
+import { PatientService } from 'src/app/services/patient.service';
+import { Analyse } from 'src/app/model/analyse';
+import { AnalyseService } from 'src/app/services/analyse.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -51,7 +51,7 @@ export class SaveEchontillonComponent implements OnInit {
 
   goToEchontillonList()
   {
-    this.router.navigate(['echontillons']);
+    this.router.navigate(['/echontillons']);
   }
 
   onSubmit()

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Patient } from 'src/app/Entity/patient';
-import { PatientService } from '../../services/patient.service';
-import { Sexe } from 'src/app/Entity/sexe';
+import { Patient } from 'src/app/model/patient';
+import { PatientService } from '../../../services/patient.service';
+import { Sexe } from 'src/app/model/sexe';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({

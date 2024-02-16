@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FournisseurService } from "../../services/fournisseur.service";
-import { Fournisseur } from "../../../Entity/Fournisseur";
+import { FournisseurService } from "../../../services/fournisseur.service";
+import { Fournisseur } from "../../../model/Fournisseur";
 import { Router } from "@angular/router";
 
 @Component({

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Analyse } from 'src/app/Entity/analyse';
-import { Echontillon } from 'src/app/Entity/echontillon';
-import { EchontillonService } from '../../services/echontillon.service';
-import { AnalyseService } from 'src/app/analyses/services/analyse.service';
-import { PatientService } from 'src/app/patients/services/patient.service';
+import { Analyse } from 'src/app/model/analyse';
+import { Echontillon } from 'src/app/model/echontillon';
+import { EchontillonService } from '../../../services/echontillon.service';
+import { AnalyseService } from 'src/app/services/analyse.service';
+import { PatientService } from 'src/app/services/patient.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 

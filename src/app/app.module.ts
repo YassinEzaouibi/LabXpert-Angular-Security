@@ -37,6 +37,8 @@ import { ResultsComponent } from './results/components/results/results.component
 import { SaveResultComponent } from './results/components/save-result/save-result.component';
 import { UpdateResultComponent } from './results/components/update-result/update-result.component';
 import { EchontillonAnalysesComponent } from './echontillons/components/echontillon-analyses/echontillon-analyses.component';
+import { LoginComponent } from './login/component/login.component';
+import {RouterLinkWithHref} from "@angular/router";
 
 
 @NgModule({
@@ -73,15 +75,17 @@ import { EchontillonAnalysesComponent } from './echontillons/components/echontil
     ResultsComponent,
     SaveResultComponent,
     UpdateResultComponent,
-    EchontillonAnalysesComponent
+    EchontillonAnalysesComponent,
+    LoginComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule,
+        RouterLinkWithHref
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

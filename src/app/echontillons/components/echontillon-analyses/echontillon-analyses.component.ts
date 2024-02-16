@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { EchontillonService } from '../../services/echontillon.service';
-import { Echontillon } from 'src/app/Entity/echontillon';
+import { EchontillonService } from '../../../services/echontillon.service';
+import { Echontillon } from 'src/app/model/echontillon';
 
 @Component({
   selector: 'app-echontillon-analyses',

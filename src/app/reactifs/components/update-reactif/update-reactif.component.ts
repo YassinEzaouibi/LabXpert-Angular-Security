@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
-import {FournisseurService} from "../../../fournisseurs/services/fournisseur.service";
-import {ReactifService} from "../../services/reactif.service";
-import {Fournisseur} from "../../../Entity/Fournisseur";
-import {Reactif} from "../../../Entity/Reactif";
+import {FournisseurService} from "../../../services/fournisseur.service";
+import {ReactifService} from "../../../services/reactif.service";
+import {Fournisseur} from "../../../model/Fournisseur";
+import {Reactif} from "../../../model/Reactif";
 
 @Component({
   selector: 'app-update-reactif',

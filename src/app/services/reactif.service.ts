@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import {Observable} from "rxjs";
-import {Reactif} from "../../Entity/Reactif";
+import {Reactif} from "../model/Reactif";
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class ReactifService {
 
   private baseURL = "http://localhost:8081/api/v1/reactifs";

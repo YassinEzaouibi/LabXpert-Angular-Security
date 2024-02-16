@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Echontillon } from 'src/app/Entity/echontillon';
-import { EchontillonService } from '../../services/echontillon.service';
-import { Router } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {Echontillon} from 'src/app/model/echontillon';
+import {EchontillonService} from '../../../services/echontillon.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-echontillons',
@@ -12,32 +12,29 @@ export class EchontillonsComponent implements OnInit {
 
   echontillons: Echontillon[];
 
-  constructor(private echontillonService: EchontillonService, private router: Router) { }
+  constructor(private echontillonService: EchontillonService, private router: Router) {
+  }
 
-  ngOnInit(): void
-  {
+  ngOnInit(): void {
     this.getEchontillons();
   }
 
-  getEchontillons()
-  {
+  getEchontillons() {
     this.echontillonService.getEchontillons().subscribe(data => {
       this.echontillons = data;
+      this.echontillons.sort((a, b) => a.id - b.id);
     })
   }
 
-  echontillonAnalyseDetail(id: number)
-  {
+  echontillonAnalyseDetail(id: number) {
     this.router.navigate(['echontillons/echontillon-analyses', id])
   }
 
-  deleteEchontillon(id: number)
-  {
+  deleteEchontillon(id: number) {
     this.echontillonService.deleteEchontillon(id).subscribe(() => this.getEchontillons());
   }
 
-  updateEchontillon(id: number)
-  {
+  updateEchontillon(id: number) {
     this.router.navigate(['echontillons/update', id]);
   }
 }

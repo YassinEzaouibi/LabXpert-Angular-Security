@@ -1,0 +1,46 @@
+<div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+  <div>
+    <img src="../../../assets/img/lab-xpert-logo.svg" >
+  </div>
+  <div class="w-full bg-white rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0">
+    <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+      <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
+        Log in to your account
+      </h1>
+      <form class="space-y-4 md:space-y-6" [formGroup]="loginFormGroup" method="post">
+        <div>
+          <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email</label>
+          <input type="email" name="email" id="email" formControlName="username"
+                 [ngClass]="{'is-invalid': submitted && loginFormGroup.controls['username'].errors}"
+                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                 placeholder="LabXpert@yassin.com" > <!--required=""-->
+          <div *ngIf="submitted && loginFormGroup.get('username')?.errors" class="invalid-feedback">
+            <div *ngIf="loginFormGroup.get('username')!.errors?.['required']">Email is required</div>
+            <div *ngIf="loginFormGroup.get('username')!.errors?.['pattern']">Email is invalid, Please Enter a valid
+              Email
+            </div>
+          </div>
+        </div>
+        <div>
+          <label for="password" class="block mb-2 text-sm font-medium text-gray-900 ">Password</label>
+          <input type="password" name="password" id="password" formControlName="password" placeholder="••••••••"
+                 [ngClass]="{'is-invalid': submitted && loginFormGroup.controls['password'].errors}"
+                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                 > <!--required=""-->
+          <div *ngIf="submitted && loginFormGroup.get('password')?.errors" class="invalid-feedback">
+            <div *ngIf="loginFormGroup.get('password')!.errors?.['required']">Password is required</div>
+          </div>
+        </div>
+        <button type="button" (click)="onLogin()"
+                class="w-full text-black  bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">
+          Log in
+        </button>
+      </form>
+      <ng-container>
+        <div class="text-red-500">
+          {{errorMassage}}
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

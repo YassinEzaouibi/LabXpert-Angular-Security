@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
-import { ReactifService } from "../../services/reactif.service";
-import { Reactif } from "../../../Entity/Reactif";
-import { Fournisseur } from "../../../Entity/Fournisseur";
-import { FournisseurService } from "../../../fournisseurs/services/fournisseur.service";
+import { ReactifService } from "../../../services/reactif.service";
+import { Reactif } from "../../../model/Reactif";
+import { Fournisseur } from "../../../model/Fournisseur";
+import { FournisseurService } from "../../../services/fournisseur.service";
 
 
 @Component({

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { EchontillonMaterial } from 'src/app/Entity/echontillon-material';
+import { EchontillonMaterial } from 'src/app/model/echontillon-material';
 
 @Injectable({
   providedIn: 'root'
