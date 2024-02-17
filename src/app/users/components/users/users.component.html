@@ -1,1 +1,109 @@
-<p>users works!</p>
+<div class="page-wrapper">
+  <div class="content">
+    <div class="page-header">
+      <div class="page-title">
+        <h4>User List</h4>
+        <h6>Manage your Users</h6>
+      </div>
+      <div class="page-btn">
+        <a routerLink="/users/add" class="btn btn-added">
+          <img src="../assets/img/icons/plus.svg" alt="img"/>
+          Add User
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="table-top">
+          <div class="wordset">
+            <ul>
+              <li>
+                <a data-bs-toggle="tooltip" data-bs-placement="top" title="pdf">
+                  <img src="../assets/img/icons/pdf.svg" alt="img"/>
+                </a>
+              </li>
+              <li>
+                <a data-bs-toggle="tooltip" data-bs-placement="top" title="excel">
+                  <img src="../assets/img/icons/excel.svg" alt="img"/>
+                </a>
+              </li>
+              <li>
+                <a data-bs-toggle="tooltip" data-bs-placement="top" title="print">
+                  <img src="../assets/img/icons/printer.svg" alt="img"/></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+            <tr>
+              <th>User Id</th>
+              <th>Complete Name</th>
+              <th>Adresse</th>
+              <th>Phone</th>
+              <th>City</th>
+              <th>Sex</th>
+              <th>Birth Date</th>
+              <th>Email</th>
+              <th>Role</th>
+              <th>Update</th>
+              <th>Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let user of users">
+              <td>
+                {{ user.id }}
+              </td>
+              <td>
+                {{ user.nom + ' ' + user.prenom }}
+              </td>
+              <td>
+                {{ user.address }}
+              </td>
+              <td>
+                {{ user.tel }}
+              </td>
+              <td>
+                {{ user.ville }}
+              </td>
+              <td>
+                {{ user.sexe }}
+              </td>
+              <td>
+                {{ user.dateNaissance }}
+              </td>
+              <td>
+                {{ user.email }}
+              </td>
+              <td>
+                {{ user.role }}
+              </td>
+
+              <td>
+                <div >
+                  <a (click)="updateUser(user.id)" class="me-3">
+                    <img src="assets/img/icons/edit.svg" alt="img" height="20" width="16"/>
+                  </a>
+                </div>
+              </td>
+
+              <td>
+                <div >
+                  <a (click)="deleteUser(user.id)" class="me-3 confirm-text">
+                    <img src="assets/img/icons/delete.svg" alt="img" height="24" width="24"/>
+                  </a>
+                </div>
+              </td>
+
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

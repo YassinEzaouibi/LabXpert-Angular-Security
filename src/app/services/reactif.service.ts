@@ -9,7 +9,7 @@ import {Reactif} from "../model/Reactif";
 
 export class ReactifService {
 
-  private baseURL = "http://localhost:8081/api/v1/reactifs";
+  private baseURL = "http://localhost:8888/api/v1/reactifs";
 
   constructor(private httpClient: HttpClient) { }
 

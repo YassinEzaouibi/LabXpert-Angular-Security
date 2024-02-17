@@ -76,12 +76,14 @@
                 <td>{{ echM.quantity }}</td>
                 <td>{{ echM.priceTotal }}</td>
                 <td>
-                  <a class="me-3">
-                    <img (click)="updateEchontillonMaterial(echM.id)" src="assets/img/icons/edit.svg" alt="img" />
-                  </a>
-                  <a (click)="deleteEchontillonMaterial(echM.id)" class="me-3 confirm-text">
-                    <img src="assets/img/icons/delete.svg" alt="img" />
-                  </a>
+                  <div class="d-flex">
+                    <a (click)="updateEchontillonMaterial(echM.id)" class="me-3">
+                      <img src="assets/img/icons/edit.svg" alt="img" height="20" width="16"/>
+                    </a>
+                    <a (click)="deleteEchontillonMaterial(echM.id)" class="me-3 confirm-text">
+                      <img src="assets/img/icons/delete.svg" alt="img" height="24" width="24"/>
+                    </a>
+                  </div>
                 </td>
               </tr>
             </tbody>

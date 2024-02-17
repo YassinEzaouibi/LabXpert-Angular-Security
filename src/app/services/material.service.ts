@@ -8,7 +8,7 @@ import { Observable } from "rxjs";
 })
 export class MaterialService {
 
-  private baseURL = "http://localhost:8081/api/v1/materials";
+  private baseURL = "http://localhost:8888/api/v1/materials";
 
   constructor( private httpClient: HttpClient ) { }
 

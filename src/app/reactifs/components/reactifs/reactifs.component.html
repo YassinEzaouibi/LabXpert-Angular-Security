@@ -78,13 +78,16 @@
                   {{ fournisseur.societeName }}
                 </div>
               </td>
+
               <td>
-                <a  (click)="updateReactif(reactif.id)" class="me-3"  >
-                  <img src="assets/img/icons/edit.svg" alt="img" height="20" width="16" />
-                </a>
-                <a  (click)="deleteReactif(reactif.id)" class="me-3 confirm-text" >
-                  <img src="assets/img/icons/delete.svg"  alt="img" height="24" width="24"/>
-                </a>
+                <div class="d-flex">
+                  <a (click)="updateReactif(reactif.id)" class="me-3">
+                    <img src="assets/img/icons/edit.svg" alt="img" height="20" width="16"/>
+                  </a>
+                  <a (click)="deleteReactif(reactif.id)" class="me-3 confirm-text">
+                    <img src="assets/img/icons/delete.svg" alt="img" height="24" width="24"/>
+                  </a>
+                </div>
               </td>
             </tr>
             </tbody>

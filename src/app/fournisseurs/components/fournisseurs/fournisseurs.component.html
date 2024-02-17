@@ -6,8 +6,8 @@
         <h6>Manage your Fournisseurs</h6>
       </div>
       <div class="page-btn">
-        <a routerLink="fournisseurs/add" class="btn btn-added">
-          <img src="../assets/img/icons/plus.svg" alt="img" />
+        <a routerLink="/fournisseurs/add" class="btn btn-added">
+          <img src="../assets/img/icons/plus.svg" alt="img"/>
           Add Fournisseur
         </a>
       </div>
@@ -30,7 +30,7 @@
               </li>
               <li>
                 <a data-bs-toggle="tooltip" data-bs-placement="top" title="print">
-                  <img src="../assets/img/icons/printer.svg" alt="img" /></a>
+                  <img src="../assets/img/icons/printer.svg" alt="img"/></a>
               </li>
             </ul>
           </div>
@@ -42,7 +42,7 @@
             <tr>
               <th>
                 <label class="checkboxs">
-                  <input type="checkbox" id="select-all" />
+                  <input type="checkbox" id="select-all"/>
                   <span class="checkmarks"></span>
                 </label>
               </th>
@@ -55,7 +55,7 @@
             <tr *ngFor="let fournisseur of fournisseurs">
               <td>
                 <label class="checkboxs">
-                  <input type="checkbox" />
+                  <input type="checkbox"/>
                   <span class="checkmarks"></span>
                 </label>
               </td>
@@ -66,12 +66,14 @@
                 {{ fournisseur.societeName }}
               </td>
               <td>
-                <a (click)="updateFournisseur(fournisseur.id)" class="me-3">
-                  <img src="assets/img/icons/edit.svg" alt="img" height="20" width="16" />
-                </a>
-                <a (click)="deleteFournisseur(fournisseur.id)" class="me-3 confirm-text">
-                  <img src="assets/img/icons/delete.svg"  alt="img" height="24" width="24"/>
-                </a>
+                <div class="d-flex">
+                  <a (click)="updateFournisseur(fournisseur.id)" class="me-3">
+                    <img src="assets/img/icons/edit.svg" alt="img" height="20" width="16"/>
+                  </a>
+                  <a (click)="deleteFournisseur(fournisseur.id)" class="me-3 confirm-text">
+                    <img src="assets/img/icons/delete.svg" alt="img" height="24" width="24"/>
+                  </a>
+                </div>
               </td>
             </tr>
             </tbody>
@@ -79,7 +81,8 @@
           <div class="dataTables_length mb-3" id="DataTables_Table_0_length">
             <label>
               <select name="DataTables_Table_0_length"
-                      aria-controls="DataTables_Table_0" class="custom-select custom-select-sm form-control form-control-sm">
+                      aria-controls="DataTables_Table_0"
+                      class="custom-select custom-select-sm form-control form-control-sm">
                 <option value="10">10</option>
                 <option value="25">25</option>
                 <option value="50">50</option>

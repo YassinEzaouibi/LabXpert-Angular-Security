@@ -30,14 +30,23 @@ import {
   UpdateEchontillonMaterialsComponent
 } from './echontillon-materials/components/update-echontillon-materials/update-echontillon-materials.component';
 import {LoginComponent} from "./login/component/login.component";
+import {UsersComponent} from "./users/components/users/users.component";
+import {SaveUserComponent} from "./users/components/save-user/save-user.component";
+import {UpdateUserComponent} from "./users/components/update-user/update-user.component";
 
 
 const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent},
+
   {path: 'login', component: LoginComponent},
+
   {path: 'fournisseurs', component: FournisseursComponent},
   {path: 'fournisseurs/add', component: SaveFournisseurComponent},
   {path: 'fournisseurs/update/:id', component: UpdateFournisseurComponent},
+
+  {path: 'users', component: UsersComponent},
+  {path: 'users/add', component: SaveUserComponent},
+  {path: 'users/update/:id', component: UpdateUserComponent},
 
   {path: 'reactifs', component: ReactifsComponent},
   {path: 'reactifs/add', component: SaveReactifComponent},

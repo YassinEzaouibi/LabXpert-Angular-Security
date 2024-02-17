@@ -14,6 +14,7 @@ import { FournisseurService } from "../../../services/fournisseur.service";
 export class SaveReactifComponent implements OnInit {
 
   fournisseurs: Fournisseur[];
+
   // @ts-ignore
   reactif: Reactif = new Reactif();
   constructor(

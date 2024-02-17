@@ -8,7 +8,7 @@ import { EchontillonMaterial } from 'src/app/model/echontillon-material';
 })
 export class EchontillonMaterialService {
 
-  private baseURL = 'http://localhost:8081/api/v1/echontillons_materials';
+  private baseURL = 'http://localhost:8888/api/v1/echontillons_materials';
 
   constructor(private httpClient: HttpClient) { }
 

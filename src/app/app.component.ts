@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {LoginService} from "./services/login.service";
 import {Subscription} from "rxjs";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,7 @@ export class AppComponent {
   isAuthenticated = false;
   userSub!: Subscription;
 
-  constructor(private authService: LoginService) {
+  constructor(private authService: LoginService, private router: Router) {
   }
 
   changeColor() {
@@ -26,6 +27,6 @@ export class AppComponent {
     });
   }
   logout(){
-
+    this.router.navigate(['/login']);
   }
 }

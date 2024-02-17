@@ -8,7 +8,7 @@ import {Observable} from "rxjs";
 })
 export class FournisseurService {
 
-  private baseURL = "http://localhost:8081/api/v1/fournisseurs";
+  private baseURL = "http://localhost:8888/api/v1/fournisseurs";
 
   constructor(private httpClient: HttpClient) { }
 

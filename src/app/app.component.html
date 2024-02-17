@@ -93,6 +93,14 @@
               <span> Material</span>
             </a>
           </li>
+          <li class="submenu">
+            <a routerLink="users">
+              <img src="assets/img/icons/product.svg" alt="img">
+              <span> Users</span>
+            </a>
+          </li>
+
+
           <li class="submenu absolute bottom-0" *ngIf="isAuthenticated">
             <a (click)="logout()">
               <span>Sign out</span>
