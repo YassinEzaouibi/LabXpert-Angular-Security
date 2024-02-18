@@ -33,43 +33,133 @@ import {LoginComponent} from "./login/component/login.component";
 import {UsersComponent} from "./users/components/users/users.component";
 import {SaveUserComponent} from "./users/components/save-user/save-user.component";
 import {UpdateUserComponent} from "./users/components/update-user/update-user.component";
+import {AuthGuardService} from "./services/auth.guard";
 
 
 const routes: Routes = [
-  {path: 'dashboard', component: DashboardComponent},
+  {path: '', component: LoginComponent},
 
   {path: 'login', component: LoginComponent},
+  {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuardService], data: {roles: ['ADMIN']}},
 
-  {path: 'fournisseurs', component: FournisseursComponent},
-  {path: 'fournisseurs/add', component: SaveFournisseurComponent},
-  {path: 'fournisseurs/update/:id', component: UpdateFournisseurComponent},
+  {
+    path: 'fournisseurs',
+    component: FournisseursComponent,
+    canActivate: [AuthGuardService],
+    data: {roles: ['ADMIN', 'MANAGER']}
+  },
+  {
+    path: 'fournisseurs/add',
+    component: SaveFournisseurComponent,
+    canActivate: [AuthGuardService],
+    data: {roles: ['ADMIN', 'MANAGER']}
+  },
+  {
+    path: 'fournisseurs/update/:id',
+    component: UpdateFournisseurComponent,
+    canActivate: [AuthGuardService],
+    data: {roles: ['ADMIN', 'MANAGER']}
+  },
 
-  {path: 'users', component: UsersComponent},
-  {path: 'users/add', component: SaveUserComponent},
-  {path: 'users/update/:id', component: UpdateUserComponent},
+  {path: 'users', component: UsersComponent, canActivate: [AuthGuardService], data: {roles: ['ADMIN']}},
+  {path: 'users/add', component: SaveUserComponent, canActivate: [AuthGuardService], data: {roles: ['ADMIN']}},
+  {path: 'users/update/:id', component: UpdateUserComponent, canActivate: [AuthGuardService], data: {roles: ['ADMIN']}},
 
-  {path: 'reactifs', component: ReactifsComponent},
-  {path: 'reactifs/add', component: SaveReactifComponent},
-  {path: 'reactifs/update/:id', component: UpdateReactifComponent},
+  {
+    path: 'reactifs',
+    component: ReactifsComponent,
+    canActivate: [AuthGuardService],
+    data: {roles: ['ADMIN', 'MANAGER', 'TECHNICIAN']}
+  },
+  {
+    path: 'reactifs/add',
+    component: SaveReactifComponent,
+    canActivate: [AuthGuardService],
+    data: {roles: ['ADMIN', 'MANAGER', 'TECHNICIAN']}
+  },
+  {
+    path: 'reactifs/update/:id',
+    component: UpdateReactifComponent,
+    canActivate: [AuthGuardService],
+    data: {roles: ['ADMIN', 'MANAGER', 'TECHNICIAN']}
+  },
 
-  {path: 'materials', component: MaterialsComponent},
-  {path: 'materials/add', component: SaveMaterialComponent},
+  {
+    path: 'materials',
+    component: MaterialsComponent,
+    canActivate: [AuthGuardService],
+    data: {roles: ['ADMIN', 'MANAGER', 'TECHNICIAN']}
+  },
+  {
+    path: 'materials/add',
+    component: SaveMaterialComponent,
+    canActivate: [AuthGuardService],
+    data: {roles: ['ADMIN', 'MANAGER', 'TECHNICIAN']}
+  },
 
-  {path: 'patients', component: PatientsComponent},
-  {path: 'patients/save', component: SavePatientComponent},
-  {path: 'patients/update/:id', component: UpdatePatientComponent},
+  {
+    path: 'patients',
+    component: PatientsComponent,
+    canActivate: [AuthGuardService],
+    data: {roles: ['ADMIN', 'MANAGER', 'TECHNICIAN']}
+  },
+  {
+    path: 'patients/save',
+    component: SavePatientComponent,
+    canActivate: [AuthGuardService],
+    data: {roles: ['ADMIN', 'MANAGER', 'TECHNICIAN']}
+  },
+  {
+    path: 'patients/update/:id',
+    component: UpdatePatientComponent,
+    canActivate: [AuthGuardService],
+    data: {roles: ['ADMIN', 'MANAGER', 'TECHNICIAN']}
+  },
 
-  {path: 'echontillons', component: EchontillonsComponent},
-  {path: 'echontillons/save', component: SaveEchontillonComponent},
-  {path: 'echontillons/update/:id', component: UpdateEchontillonComponent},
-  {path: 'echontillons/echontillon-analyses/:id', component: EchontillonAnalysesComponent},
+  {
+    path: 'echontillons',
+    component: EchontillonsComponent,
+    canActivate: [AuthGuardService],
+    data: {roles: ['ADMIN', 'MANAGER', 'TECHNICIAN']}
+  },
+  {
+    path: 'echontillons/save',
+    component: SaveEchontillonComponent,
+    canActivate: [AuthGuardService],
+    data: {roles: ['ADMIN', 'MANAGER', 'TECHNICIAN']}
+  },
+  {
+    path: 'echontillons/update/:id',
+    component: UpdateEchontillonComponent,
+    canActivate: [AuthGuardService],
+    data: {roles: ['ADMIN', 'MANAGER', 'TECHNICIAN']}
+  },
 
-  {path: 'echontillon-materials', component: EchontillonMaterialsComponent},
-  {path: 'echontillon-materials/save', component: SaveEchontillonMaterialsComponent},
-  {path: 'echontillon-materials/update/:id', component: UpdateEchontillonMaterialsComponent},
+  {
+    path: 'echontillons/echontillon-analyses/:id',
+    component: EchontillonAnalysesComponent,
+    canActivate: [AuthGuardService],
+    data: {roles: ['ADMIN', 'MANAGER', 'TECHNICIAN']}
+  },
+  {
+    path: 'echontillon-materials',
+    component: EchontillonMaterialsComponent,
+    canActivate: [AuthGuardService],
+    data: {roles: ['ADMIN', 'MANAGER', 'TECHNICIAN']}
+  },
+  {
+    path: 'echontillon-materials/save',
+    component: SaveEchontillonMaterialsComponent,
+    canActivate: [AuthGuardService],
+    data: {roles: ['ADMIN', 'MANAGER', 'TECHNICIAN']}
+  },
 
-  {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
-
+  {
+    path: 'echontillon-materials/update/:id',
+    component: UpdateEchontillonMaterialsComponent,
+    canActivate: [AuthGuardService],
+    data: {roles: ['ADMIN', 'MANAGER', 'TECHNICIAN']}
+  },
 ];
 
 @NgModule({
